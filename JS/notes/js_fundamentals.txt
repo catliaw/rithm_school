@@ -1,0 +1,93 @@
+ARRAY BASICS
+
+- not a primitive data type
+- a reference type
+- typeof an array is "object"
+- arr[arr.length-1]; // shorthand for the last element of an array
+
+Add to Array:
+
+- push function - add to end of an array, returns new length of array
+    array.push(item); // returns the new length (#) of array
+
+- unshift function - add to beginning of an array, returns new length of array
+    array.unshift(item); //returns the new length (#) of array
+
+Remove from Array:
+
+- pop function - removes item at the end of array one-by-one, returns the item removed
+    array.pop(); //returns the item removed
+
+- shift function - removes item from the beginning of the array, returns the item removed
+    array.shift() //returns the item removed
+
+- delete function on array - replaces item at index with undefined
+    delete array[1]; //replaces item at array[1] with undefined
+
+Removing/Adding or both with splice
+
+- array.splice(index start splice inclusive, # items to remove, items to add in place separated by commas)
+    var arr = ["a","b","c","d"];
+    arr.splice(1,2,"x","y","z"); // ["b", "c"]
+    arr; // ["a", "x", "y", "z", "d"]
+
+ARRAY METHODS
+
+- array.length - a property, not function, that returns how many elements are in the array
+
+- array.slice() - makes a copy of an array, can copy a subarray
+    array.slice(); //copies the entire array
+    array.slice(start index inclusive, end index exclusive);
+
+- array1.concat(array2); - joins two arrays together, can join multiple arrays separated by comma to return a single array, can also add comma separated list of items to an array to create a new array
+    joinedArray = array1.concat(array2);
+    joinedArray = array1.concat(array2, array3, array4);
+    joinedArray = array1.concat("one", 2, 3.4);
+
+- array.join(separator) - joins elements of an array into a string separated by the argument/delimiter
+
+- array.indexOf(item) - finds the first index of the element passed in; if not found, returns -1; good for checking if an item is in an array
+
+- array.lastIndexOf(item) - starts searching for an item from the end, returns the index, returns -1 if item not found in the array
+
+Reference vs Value
+
+Passing by Value:
+
+var var1 = "A";
+var var2 = var1;
+var2 // "A";
+var2 = "B";
+var1; // "A"
+var2; // "B"
+- these primitive types have a specific address in memory
+- when assign var1 = var2, JS creates a copy of the string "A" and assign that value to var2
+- var1 and var2 pointing to different locations in memory even if the string looks identical
+
+But for Reference types...
+
+Passing by Reference:
+
+var array1 = ["A", "B"];
+var array2 = array1;
+array2.push("C");
+array1; // ["A", "B", "C"]
+array2; // ["A", "B", "C"]
+- when set another variable equal to a variable pointing to an array, JS does not create a new array, it creates a reference/pointer to the array
+- both variable names refer/points to the same array
+
+ARRAY ITERATIONS
+
+For Loop:
+for (initializer, condition, counter) {}
+- initializer - declare variables to be used in the loop, usually variable i as a counter variable for number of times to loop
+- condition - expression to evaluate true or false, loop if condition is true
+- counter - how change (increase/decrease) the variable(s) initialized
+- {} if condition is true, do stuff in curly brace
+Example:
+for(var i=0; i<5; i++){
+    console.log(i);
+}
+
+
+
