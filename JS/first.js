@@ -212,3 +212,80 @@ for(var singleKey in programming){
 for(var key in programming){
     console.log(programming[key]);
 }
+
+// FUNCTION BASICS EXERCISES
+
+// function myName(fullName){
+//     firstAndLast = fullName;
+//     console.log(firstAndLast);
+//     return firstAndLast;
+// }
+
+function myName(){
+    var fullName = "Cat L";
+    console.log(fullName);
+    // return fullName;
+}
+
+myName();
+
+favoriteFoods = ["pizza", "ice cream"];
+
+function randomFood(){
+    // var index = Math.round(Math.random() * (favoriteFoods.length - 1));
+    var index = Math.floor(Math.random() * favoriteFoods.length);
+    return favoriteFoods[index];
+}
+
+food = randomFood();
+
+console.log(food);
+
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function displayOddNumbers(){
+    for(var i = 0; i < numbers.length; i++){
+        if(numbers[i] % 2 === 1){
+            console.log(numbers[i]);
+        }
+    }
+}
+
+displayOddNumbers();
+
+function displayEvenNumbers(){
+    for (var i = 0; i < numbers.length; i++){
+        if (numbers[i] % 2 === 0){
+            console.log(numbers[i]);
+        }
+    }
+}
+
+displayEvenNumbers();
+
+function returnFirstOddNumber(){
+    for (var i = 0; i < numbers.length; i++){
+        if (numbers[i] % 2 === 1){
+            console.log(numbers[i]);
+            break;
+        }
+    }
+}
+
+returnFirstOddNumber();
+
+function returnFirstHalf(){
+    // var half = numbers.length / 2;
+    // return numbers.slice(0, half);
+    return numbers.slice(0, numbers.length/2);
+}
+
+returnFirstHalf();
+
+function returnSecondHalf(){
+    // var half = numbers.length / 2;
+    // return numbers.slice(half);
+    return numbers.slice(numbers.length/2);
+}
+
+returnSecondHalf();

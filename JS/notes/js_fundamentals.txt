@@ -234,8 +234,28 @@ if ("keyName" in obj){
 }
 
 
+//////////////////// F U N C T I O N S ////////////////////
 
 
+- function: a repeatable process of procedure
+- input: (variable(s))
+- output: returns a value
+
+Function Declaration / Definition
+
+function functionName(parameter(s)){
+    // do the things //;
+}
+
+- calling/executing a function = invoking a function
+functionName();
+
+Returning Values from Functions
+
+- if no specified value to be returned, function will return undefined
+- return keyword can only be executed once in a function; once executed, function complete
+
+Conditional Logic with Return Statements
 
 
 
