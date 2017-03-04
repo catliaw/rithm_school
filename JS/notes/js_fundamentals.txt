@@ -79,7 +79,9 @@ array2; // ["A", "B", "C"]
 ARRAY ITERATIONS
 
 For Loop:
-for (initializer, condition, counter) {}
+
+for (initializer; condition; counter) {}
+
 - initializer - declare variables to be used in the loop, usually variable i as a counter variable for number of times to loop
 - condition - expression to evaluate true or false, loop if condition is true
 - counter - how change (increase/decrease) the variable(s) initialized
@@ -89,5 +91,32 @@ for(var i=0; i<5; i++){
     console.log(i);
 }
 
+While Loop:
 
+- while loop only takes a condition
+- handle initialization before the loop
+- incrementing/decrementing inside the loop
+- beware of infinite loop
 
+var i = 0;
+while (condition){
+    //do this//;
+    i++;
+}
+
+Do...While Loop:
+
+- specify condition at the end
+- difference from while loop: code inside do...while loop guaranteed to execute at least once, even if while condition is false
+- while condition runs after the do code has run through once
+
+var i = 0;
+do {
+    //this thing//;
+    i++;
+} while(condition);
+
+Exiting out of Loop:
+
+- break : to exit a loop before it has finished
+- continue : skip the current iteration and continue the loop at the next step of the iteration
