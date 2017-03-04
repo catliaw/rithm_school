@@ -137,3 +137,78 @@ console.log(people);
 
 var withBob = people.concat("Bob");
 
+//OBJECT BASICS EXERCISES
+var obj = {
+    firstName: "Cat",
+    lastName: "L",
+    occupation: "student"
+};
+
+obj.firstName;
+obj["firstName"];
+obj.lastName;
+obj["lastName"];
+obj.occupation;
+obj["occupation"];
+
+obj.hobby = "eating";
+
+delete obj.occupation;
+
+//Difference between dot notation and bracket notation:
+//Dot notation is preferred/best practice, but not always possible.
+//Sometimes when a key is an expression (like a number) or a variable,
+//brackets have to be used. Otherwise dot notation is used.
+
+//OBJECT ITERATION EXERCISES
+
+var namesAndHobbies = {
+    elie: "JavaScript",
+    matt: "jogging",
+    janey: "table building",
+    tim: "sailing"
+};
+
+for(var singleKey in namesAndHobbies){
+    console.log(namesAndHobbies[singleKey] + " => " + singleKey);
+}
+
+namesAndHobbies.cat = "eating";
+
+if("cat" in namesAndHobbies){
+    console.log(namesAndHobbies.cat + " => cat");
+}
+
+// OBJECT EXERCISES
+
+var programming = {
+    languages: ["JavaScript", "Python", "Ruby"],
+    isChallenging: true,
+    isRewarding: true,
+    difficulty: 8,
+    jokes: "http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke"
+};
+
+programming.languages.push("Go");
+
+programming.difficulty = 7;
+
+delete programming.jokes;
+
+programming.isFun = true;
+
+for(var singleKey in programming.languages){
+    console.log(programming.languages[singleKey]);
+}
+
+for(i=0; i < programming.languages.length; i++){
+    console.log(programming.languages[i]);
+}
+
+for(var singleKey in programming){
+    console.log(singleKey);
+}
+
+for(var key in programming){
+    console.log(programming[key]);
+}

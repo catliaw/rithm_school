@@ -1,4 +1,8 @@
+//////////////////// A R R A Y S ////////////////////
+
+
 ARRAY BASICS
+
 
 - not a primitive data type
 - a reference type
@@ -31,7 +35,9 @@ Removing/Adding or both with splice
     arr.splice(1,2,"x","y","z"); // ["b", "c"]
     arr; // ["a", "x", "y", "z", "d"]
 
+
 ARRAY METHODS
+
 
 - array.length - a property, not function, that returns how many elements are in the array
 
@@ -76,7 +82,9 @@ array2; // ["A", "B", "C"]
 - when set another variable equal to a variable pointing to an array, JS does not create a new array, it creates a reference/pointer to the array
 - both variable names refer/points to the same array
 
+
 ARRAY ITERATIONS
+
 
 For Loop:
 
@@ -120,3 +128,115 @@ Exiting out of Loop:
 
 - break : to exit a loop before it has finished
 - continue : skip the current iteration and continue the loop at the next step of the iteration
+
+
+//////////////////// O B J E C T S ////////////////////
+
+
+OBJECT BASICS
+
+
+- key-value mapping
+
+var object {
+    key1: "value1",
+    key2: "value2",
+    key3: "value3",
+    key4: true/false
+};
+
+- key-value pairs are unordered in the object
+
+Accessing Object Values
+
+- access value using dot notation:
+objectName.keyName;
+
+- access value using bracket notation:
+objectName["keyName"]; //note that the key name is in quotations
+
+objectName[keyName]; will return an error because there is no variable by that name (keyName).
+
+- Best practice: use dot notation if able to use it
+- Might not be able to use it if...
+    - the key is a number
+    - using a variable that points to the key to indicate the key
+
+    Example:
+
+    var obj = {};
+    var person = "Tom";
+
+    obj[person] = "This is a person";
+    obj[1+1+1] = "Three";
+
+    obj;
+
+    /*
+    obj now should look like this: 
+    {
+        Tom: "This is a person",
+        3: "Three"
+    }
+    */
+
+    obj.3;// Syntax Error! Can't use the dot notation
+    obj[3]; // "Three" - we NEED to use the bracket notation
+    obj[person]; // "This is a person" // variable person points to "Tom"
+    obj["Tom"]; // "This is a person" //Tom must be in quotes
+    obj.person; // undefined
+    obj.Tom; // "This is a person"
+
+- Use bracket notation when need to evaluate some expression or pass in a variable to get the name of the key
+- Use dot notation when know the name of key -- if name of key is not a variable or expression
+
+- type of a key in JS is always a string, JS automatically converts the key to a string (i.e. numbers like 7 --> "7")
+
+Adding to Objects:
+
+- can use . or [], though . is preferred if possible
+obj.newKey1 = "new value"; //preferred
+obj["newKey2"] = "another new value";
+
+Removing from Objects:
+
+- delete keyword to remove a key from an object
+
+delete obj.newKey1; //returns true, even if trying to delete a key that doesn't exist... haha... >__<
+
+
+OBJECT ITERATION
+
+
+for...in loop:
+
+var obj = {
+    // key-value pairs //
+}
+
+for(var singleKey in obj){
+    // do something with obj[singleKey] //;
+}
+
+- singleKey - variable assigned to each key in the object
+- must use bracket notation to access the key's value (because variable)
+
+if...in statement:
+
+- checking for a key in an object
+
+var obj = {
+    // key-value pairs //
+}
+
+if ("keyName" in obj){
+    // do this //;
+}
+
+
+
+
+
+
+
+
