@@ -237,6 +237,9 @@ if ("keyName" in obj){
 //////////////////// F U N C T I O N S ////////////////////
 
 
+FUNCTION BASICS
+
+
 - function: a repeatable process of procedure
 - input: (variable(s))
 - output: returns a value
@@ -255,7 +258,27 @@ Returning Values from Functions
 - if no specified value to be returned, function will return undefined
 - return keyword can only be executed once in a function; once executed, function complete
 
-Conditional Logic with Return Statements
+
+FUNCTION PARAMETERS AND SCOPE
+
+
+- input of function: parameters / arguments
+
+Function Scope
+
+- Scope: "The context in which values and expressions are 'visible', or can be referenced"
+
+- global scope
+
+- function scope
+
+1. all variables that are defined OUTISDE of the function (AND INSIDE of functions WITHOUT the var keyword) are declared in the GLOBAL SCOPE, and
+
+2. all variables definied INSIDE of functions can only be accessed by those functions (and any inner functions)
+
+- if omit var keyword INSIDE a function, we actually declare that variable in the global scope. DO NOT DO THIS!!!!!!!!
+- if need to change some (global) variable in a function, the variable should be declared in the global scope (outside the function) and assign the variable's new value in the function
+
 
 
 
